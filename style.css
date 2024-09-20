@@ -74,7 +74,10 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 375px) {
+  body {
+    background: url(images/background-pattern-mobile.svg) no-repeat, var(--light-pink);
+  }
   .card {
     padding: 30px;
     border-radius: 10px;
