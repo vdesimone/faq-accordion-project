@@ -34,11 +34,11 @@ body {
 .header {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .header h1 {
   color: var(--dark-purple);
-  font-size: 2rem;
+  font-size: 2.4rem;
 }
 .star-icon {
   margin-right: 20px;
@@ -47,14 +47,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
 }
 .question h2 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--dark-purple);
 }
-.answer {
-  margin-bottom: 30px;
+.question span img {
+  margin-left: 20px;
 }
 .answer p {
   font-size: 0.8rem;
@@ -62,4 +61,14 @@ body {
 }
 .solid {
   border: 1px solid var(--light-pink);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.show {
+  margin-top: 20px;
+  display: block;
+}
+.hide {
+  display: none;
 }
