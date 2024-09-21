@@ -67,11 +67,15 @@ body {
 }
 
 .show {
+  max-height: 200px;
   margin-top: 20px;
-  display: block;
+  overflow: clip;
+  transition: max-height .3s;
 }
 .hide {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.15s;
 }
 
 @media screen and (max-width: 375px) {
