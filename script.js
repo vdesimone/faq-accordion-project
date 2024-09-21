@@ -1,19 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const icons = document.querySelectorAll(".icon");
+  const questions = document.querySelectorAll(".question");
 
-  icons.forEach(icon => {
-    icon.addEventListener("click", () => {
-      const isPlus = icon.classList.contains("plus");
+  const resetIconsAndAnswers = () => {
+    const icons = document.querySelectorAll(".icon");
+
+    icons.forEach(icon => {
       const answerParagraph = icon.closest(".question").nextElementSibling.querySelector("p");
+      icon.src = "images/icon-plus.svg"
+      icon.alt = "Plus Icon";
+      icon.classList.remove("minus");
+      icon.classList.add("plus");
+      answerParagraph.classList.remove("show");
+      answerParagraph.classList.add("hide");
+    });
+  };
 
-      icons.forEach(i => {
-        i.src = "images/icon-plus.svg";
-        i.alt = "Plus Icon";
-        i.classList.remove("minus");
-        i.classList.add("plus");
-        i.closest(".question").nextElementSibling.querySelector("p").classList.remove("show");
-        i.closest(".question").nextElementSibling.querySelector("p").classList.add("hide");
-      });
+  questions.forEach(question => {
+    question.addEventListener("click", () => {
+      const icon = question.querySelector(".icon");
+      const isPlus = icon.classList.contains("plus");
+      const answerParagraph = question.nextElementSibling.querySelector("p");
+
+      resetIconsAndAnswers();
 
       if (isPlus) {
         icon.src = "images/icon-minus.svg";
