@@ -4,6 +4,7 @@
   --light-pink: hsl(275, 100%, 97%);
   --grayish-purple: hsl(292, 16%, 49%);
   --dark-purple: hsl(292, 42%, 14%);
+  --bright-purple: #AD28EB;
 }
 * {
   margin: 0;
@@ -12,7 +13,9 @@
   font-family: "Work Sans", sans-serif;
 }
 body {
-  background: url(images/background-pattern-desktop.svg) no-repeat, var(--light-pink);
+  background:
+    url(images/background-pattern-desktop.svg) repeat-x,
+    var(--light-pink);
 }
 
 .container {
@@ -51,10 +54,18 @@ body {
 .question h2 {
   font-size: 0.9rem;
   color: var(--dark-purple);
+  transition: color 0.2s;
+}
+.question h2:hover {
+  cursor: pointer;
+  color: var(--bright-purple);
 }
 .question span img {
   display: flex;
   margin-left: 20px;
+}
+.question span img:hover {
+  cursor: pointer;
 }
 .answer p {
   font-size: 0.8rem;
@@ -80,7 +91,9 @@ body {
 
 @media screen and (max-width: 375px) {
   body {
-    background: url(images/background-pattern-mobile.svg) no-repeat, var(--light-pink);
+    background:
+      url(images/background-pattern-mobile.svg) no-repeat,
+      var(--light-pink);
   }
   .card {
     padding: 30px;
